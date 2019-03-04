@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.app.framework">
+
+    <application >
+        <activity android:name="com.util.permission.PermissionUtils$PermissionActivity"/>
+    </application>
+</manifest>

@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+//添加maven plugin, 用于发布我们的jar
+apply plugin: 'maven'
 
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
@@ -30,4 +32,22 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies["espressoX"]
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["material"]
+}
+
+repositories {
+    mavenCentral()
+}
+
+//设置maven deployer
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //设置插件的GAV参数
+            pom.groupId = 'com.andorid.utils'
+            pom.artifactId = 'utils'
+            pom.version = 1.0
+            //文件发布到下面目录
+            repository(url: uri('../repo'))
+        }
+    }
 }

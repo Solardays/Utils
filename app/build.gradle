@@ -29,11 +29,11 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':util')
     testImplementation rootProject.ext.dependencies["junit"]
     androidTestImplementation rootProject.ext.dependencies["runnerX"]
     androidTestImplementation rootProject.ext.dependencies["espressoX"]
     implementation rootProject.ext.dependencies["appcompat"]
     implementation rootProject.ext.dependencies["material"]
     implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation project(':util')
 }

@@ -42,12 +42,13 @@ repositories {
 uploadArchives {
     repositories {
         mavenDeployer {
+            def mavenDirPath = file('F:/repo/maven') // 本地存放目录(自行选择)，可放在gradle.properties文件中引用
             //设置插件的GAV参数
             pom.groupId = 'com.andorid.utils'
             pom.artifactId = 'utils'
-            pom.version = 1.0
+            pom.version = "1.0.0"
             //文件发布到下面目录
-            repository(url: uri('../repo'))
+            repository(url: uri(mavenDirPath))
         }
     }
 }

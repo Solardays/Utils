@@ -7,10 +7,16 @@ buildscript {
 
     ext.kotlinVersion = '1.3.11'
     repositories {
+
         google()
         jcenter()
 
         maven { url "https://jitpack.io" }
+        maven {
+            //这里是发布在本地文件夹了
+            url uri('F:/repo/maven')
+        }
+
 
     }
     dependencies {

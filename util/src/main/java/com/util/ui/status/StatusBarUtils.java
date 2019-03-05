@@ -15,7 +15,7 @@ import androidx.annotation.IntRange;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import com.app.framework.R;
+import com.util.R;
 import com.util.constants.StatusBarConstants;
 import com.util.ui.BarUtils;
 
